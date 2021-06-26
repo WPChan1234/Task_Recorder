@@ -4,11 +4,12 @@ ImageGrab.grab = partial(ImageGrab.grab, all_screens=True)
 import pyautogui
 from datetime import datetime
 
-DateTime = datetime.now().strftime("%Y%m%d-%H%M")
-print(DateTime)
 
-screen = pyautogui.screenshot()
+def Screen_CAP():
+    DateTime = datetime.now().strftime("%Y%m%d-%H%M")
+    print(DateTime)
+
+    screen = pyautogui.screenshot()
 
 
-screen.save(DateTime+".jpg")
-
+    screen.save(DateTime+".jpg")
