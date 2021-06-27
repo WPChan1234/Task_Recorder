@@ -13,3 +13,6 @@ def Screen_CAP():
 
 
     screen.save(DateTime+".jpg")
+
+## for testing
+##Screen_CAP()
