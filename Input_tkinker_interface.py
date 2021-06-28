@@ -1,24 +1,35 @@
 from tkinter import *
-from tkinter.ttk import *
+from tkinter import messagebox
+from tkinter import filedialog
 
-# writing code needs to
-# create the main window of
-# the application creating
-# main window object named root
-root = Tk()
-
-# giving title to the main window
-root.title("First_Program")
-
-# Label is what output will be
-# show on the window
-label = Label(root, text="Hello World !").pack()
-
-# calling mainloop method which is used
-# when your application is ready to run
-# and it tells the code to keep displaying
-root.mainloop()
+messagebox.showinfo('Task Recorder','Screen Capture/ Request Task Input every 30min')
 
 
+def define_file():
+    file = filedialog.askopenfilename()
+    lbl.configure(text=file)
 
-###https://realpython.com/python-gui-tkinter/
+window = Tk()
+
+window.title("Task Recorder")
+
+window.geometry('350x200')
+
+Line1=Label(window, text="Storage location for .txt file")
+lbl = Label(window, text="Define data storage file")
+
+Line1.grid(column=0, row=0)
+lbl.grid(column=0, row=1)
+
+btn = Button(window, text="Define",command=define_file)
+
+btn.grid(column=1, row=1)
+
+
+
+# Define File Storage
+
+
+
+
+window.mainloop()
