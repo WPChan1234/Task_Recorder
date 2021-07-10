@@ -6,8 +6,9 @@ messagebox.showinfo('Task Recorder','Screen Capture/ Request Task Input every 30
 
 
 def define_file():
-    file = filedialog.askopenfilename()
+    file = filedialog.askdirectory()
     lbl.configure(text=file)
+    return (file)
 
 window = Tk()
 
